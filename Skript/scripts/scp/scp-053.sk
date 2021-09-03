@@ -1,0 +1,21 @@
+#The Feed For SCP-053.
+command /053-feed:
+  trigger:
+    give player 8 of shiny bread named "&e&l053 Feed"
+
+#Applies the wither effect when player hits SCP-053.
+on damage:
+  attacker is player
+  victim is a baby zombie
+  apply wither 5 to attacker
+  
+#SCP-053 Eats the food
+on right click:
+  if player's held item is shiny bread named "&e&l053 Feed":
+    if target is baby zombie:
+      remove 1 of shiny bread named "&e&l053 Feed" from player
+      play 3 of item particle using bread at location of target
+      play "ENTITY_HORSE_EAT" to player
+
+
+

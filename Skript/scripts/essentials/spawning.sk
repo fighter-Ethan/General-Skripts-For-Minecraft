@@ -1,0 +1,21 @@
+command /setrespawn:
+  trigger:
+    set {point::playeruuid} to location of player 
+    send message "<green>Successfully set respawn point!"
+	
+on respawn:
+  teleport player to {point::playeruuid}
+  
+command /setspawn:
+  permission: admin.permission
+  permission message: "You don't have sufficient perms for that!"
+  trigger:
+    set {spawn1} to location
+    make player execute command "setworldspawn"
+    send message "Spawn set..."
+	
+command /spawn:
+  cooldown: 5 seconds
+  trigger:
+    teleport the player to {spawn1}
+    send message "Teleported..." to player

@@ -1,0 +1,7 @@
+command /afk:
+  trigger:
+    send message "&6%player% &chas gone AFK!"
+	
+command /unafk:
+  trigger:
+    send message "&6%player% &2is no longer AFK!"

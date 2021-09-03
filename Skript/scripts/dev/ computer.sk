@@ -1,0 +1,141 @@
+on right click:
+  if clicked block is player head:
+    open chest with 1 row named "&4Computer Starting..." to player
+    wait 1 tick
+    play sound "block.note_block.chime" at volume 5 at pitch 1 to player
+    set slot 1 of player's current inventory to emerald block named "&f"
+    wait 10 ticks
+    play sound "block.note_block.chime" at volume 5 at pitch 1.25 to player
+    set slot 3 of player's current inventory to emerald block named "&f"
+    wait 10 ticks
+    play sound "block.note_block.chime" at volume 5 at pitch 1.75 to player
+    set slot 5 of player's current inventory to emerald block named "&f"
+    wait 10 ticks
+    play sound "block.note_block.chime" at volume 5 at pitch 4 to player
+    set slot 7 of player's current inventory to emerald block named "&f"
+    wait 10 ticks
+    close inventory of player
+    wait 1 tick
+    play sound "block.note_block.pling" at volume 5 at pitch 2 to player
+    open chest with 5 rows named "<grey>[&eScD<grey>] &0Research Computer" to player
+    wait 1 tick
+    set slot 0 of player's current inventory to player head named "&f&lUsername:" with lore "&6%player%"
+    if name of player is "fighter_Ethan", "dragonslayerocs" or "Dashboard_":
+      set slot 9 of player's current inventory to shiny red glass pane named "&fClearance:" with lore "&dL4"
+    if name of player is "Basilik_slayer" or "jakuban":
+      set slot 9 of player's current inventory to orange glass pane named "&fClearance:" with lore "&6L3"
+    if name of player is "fighter_Ethan":
+      set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dAlchemy Lead"
+    if name of player is "dragonslayerocs":
+      set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dElder Alchemist"
+    if name of player is "AskWhySoBlazQwex" or "jakuban":
+      set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dApprentice Alchemist"
+    if name of player is "Basilik_slayer":
+      set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&cExploration Lead"
+    if name of player is "Dashboard_":
+      set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&2ScD Director"
+    set slot 27 of player's current inventory to book and quill named "&fResearch Logs"
+    set slot 36 of player's current inventory to barrier named "&4&lExit"
+    set slot 8 of player's current inventory to book named "&6Personnel List" with lore "&fLast Updated 08/30/2021"
+	
+on inventory click:
+  if inventory name of player's current inventory is "&4Computer Starting...":
+    cancel event
+  if inventory name of player's current inventory is "<grey>[&eScD<grey>] &0Research Computer":
+    if clicked slot is 0:
+      cancel event
+    if clicked slot is 8:
+      close inventory of player
+      open chest with 6 rows named "<grey>[&eScD<grey>]&0 Personnel List" to player   
+      wait 1 tick
+      set slot 4 of player's current inventory to shiny diamond named "&dAlchemy Lead" with lore "&6fighter_Ethan"
+      set slot 22 of player's current inventory to shiny trident named "&dElders" with lore "&6Click to expand"
+      set slot 40 of player's current inventory to trident named "&dApprentices" with lore "&6Click to expand"
+      set slot 45 of player's current inventory to barrier named "&4Back to Desktop"
+    if clicked slot is 9:
+      cancel event
+    if clicked slot is 18:
+      cancel event
+    if clicked slot is 27:
+      close inventory of player
+      open chest with 5 rows named "<grey>[&eScD<grey>]&0 Research Logs" to player
+      wait 1 tick
+      set slot 0 of player's current inventory to book and quill named "&6Submitted Logs"
+      set slot 18 of player's current inventory to shiny book and quill named "&aGraded Logs"
+      set slot 36 of player's current inventory to redstone block named "&4&lBack to Desktop"
+    if clicked slot is 36:
+      close inventory of player
+      play sound "block.note_block.guitar" at volume 5 at pitch 1.25 to player
+      set action bar of player to "&aSuccessfully Logged Off!"
+    else:
+      cancel event
+  
+on inventory click:
+  if inventory name of player's current inventory is "<grey>[&eScD<grey>]&0 Personnel List":
+    if clicked slot is 4:
+      cancel event
+    if clicked slot is 22:
+      cancel event
+      set slot 24 of player's current inventory to shiny pink glass named "&6dragonslayerocs"
+    if clicked slot is 40:
+      cancel event
+      set slot 42 of player's current inventory to shiny glass named "&6AskWhySoBlazQwex"
+      wait 1 tick
+      set slot 43 of player's current inventory to shiny glass named "&6Jakuban"
+      set slot 44 of player's current inventory to shiny glass named "&6JunkError"
+    if clicked slot is 24:
+      cancel event
+    if clicked slot is 42:
+      cancel event
+    if clicked slot is 43:
+      cancel event
+    if clicked slot is 44:
+      cancel event
+    if clicked slot is 45:
+      open chest with 5 rows named "<grey>[&eScD<grey>] &0Research Computer" to player
+      wait 1 tick
+      set slot 0 of player's current inventory to player head named "&f&lUsername:" with lore "&6%player%"
+      if name of player is "fighter_Ethan", "dragonslayerocs" or "Dashboard_":
+        set slot 9 of player's current inventory to shiny red glass pane named "&fClearance:" with lore "&dL4"
+      if name of player is "JunkError" or "jakuban":
+        set slot 9 of player's current inventory to orange glass pane named "&fClearance:" with lore "&6L3"
+      if name of player is "fighter_Ethan":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dAlchemy Lead"
+      if name of player is "dragonslayerocs":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dElder Alchemist"
+      if name of player is "JunkError" or "jakuban":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dApprentice Alchemist"
+      if name of player is "Dashboard_":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&2ScD Director"
+        set slot 27 of player's current inventory to book and quill named "&fResearch Logs"
+        set slot 36 of player's current inventory to barrier named "&4&lExit"
+        set slot 8 of player's current inventory to book named "&6Personnel List" with lore "&fLast Updated 08/30/2021"
+  
+on inventory click:
+  if inventory name of player's current inventory is "<grey>[&eScD<grey>]&0 Research Logs":
+    if clicked slot is 0:
+      set slot 2 of player's current inventory to book named "&6Unavailable"
+    if clicked slot is 18:
+      set slot 20 of player's current inventory to shiny book named "&aUnavailable"
+    if clicked slot is 36:
+      close inventory of player
+      open chest with 5 rows named "<grey>[&eScD<grey>] &0Research Computer" to player
+      wait 1 tick
+      set slot 0 of player's current inventory to player head named "&f&lUsername:" with lore "&6%player%"
+      if name of player is "fighter_Ethan", "dragonslayerocs" or "Dashboard_":
+        set slot 9 of player's current inventory to shiny red glass pane named "&fClearance:" with lore "&dL4"
+      if name of player is "dragonslayerocs", "JunkError" or "jakuban":
+        set slot 9 of player's current inventory to orange glass pane named "&fClearance:" with lore "&6L3"
+      if name of player is "fighter_Ethan":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dAlchemy Lead"
+      if name of player is "dragonslayerocs":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dElder Alchemist"
+      if name of player is "JunkError" or "jakuban":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&dApprentice Alchemist"
+      if name of player is "Dashboard_":
+        set slot 18 of player's current inventory to ladder named "&fRank:" with lore "&2ScD Director"
+      set slot 27 of player's current inventory to book and quill named "&fResearch Logs"
+      set slot 36 of player's current inventory to barrier named "&4&lExit"
+      set slot 8 of player's current inventory to book named "&6Personnel List" with lore "&fLast Updated 08/30/2021"
+    else:
+      cancel event

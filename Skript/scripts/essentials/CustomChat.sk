@@ -1,0 +1,12 @@
+command /elder <text>:
+  permission: elder.chat
+  trigger:
+    loop all players:
+      if loop-player has permission "elder.chat":
+        send "&7[&dElder Chat&7] &6%player%: <grey>%arg-1%" to loop-player
+	
+command /shout <text>:
+  aliases: "-<text>"
+  permission: hr.permission
+  trigger:
+    broadcast "&7[&6SHOUT&7] &c&l%player%: &b%arg-1%"

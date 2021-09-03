@@ -1,0 +1,5 @@
+on player join:
+  play sound "block.note_block.pling" at volume 10 to all players
+  
+on quit:
+  play sound "entity.ender_pearl.throw" at volume 10 to all players

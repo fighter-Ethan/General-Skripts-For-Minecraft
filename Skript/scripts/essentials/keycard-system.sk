@@ -1,0 +1,61 @@
+on right click:
+  if clicked block is stone button:
+    if player's held item is not lime stained glass pane named "<grey>L1 Access":
+      if player's held item is not yellow stained glass pane named "<grey>L2 Access":
+        if player's held item is not orange stained glass pane named "<grey>L3 Access":
+          if player's held item is not shiny red stained glass pane named "<grey>L4 Access":
+            if player's held item is not shiny glass pane named "<grey>L4 Access":
+              set action bar of player to "<pink>Access Denied"
+              cancel event
+    if player's held item is lime stained glass pane named "<grey>L1 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is yellow stained glass pane named "<grey>L2 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is orange stained glass pane named "<grey>L3 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny red stained glass pane named "<grey>L4 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny glass pane named "<grey>L5 Access":
+      set action bar of player to "&aAccess Granted"
+  if clicked block is dark oak button:
+    if player's held item is not yellow stained glass pane named "<grey>L2 Access":
+      if player's held item is not shiny red stained glass pane named "<grey>L4 Access":
+        if player's held item is not orange stained glass pane named "<grey>L3 Access":
+          if player's held item is not shiny glass pane named "<grey>L5 Access":
+            set action bar of player to "<pink>Access Denied"
+            cancel event
+    if player's held item is yellow stained glass pane named "<grey>L2 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is orange stained glass pane named "<grey>L3 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny red stained glass pane named "<grey>L4 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny glass pane named "<grey>L5 Access":
+      set action bar of player to "&aAccess Granted"
+  if clicked block is acacia button:
+    if player's held item is not shiny red stained glass pane named "<grey>L4 Access":
+      if player's held item is not shiny glass pane named "<grey>L5 Access":
+        set action bar of player to "<pink>Access Denied"
+        cancel event
+    if player's held item is shiny red stained glass pane named "<grey>L4 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny glass pane named "<grey>L5 Access":
+      set action bar of player to "&aAccess Granted"
+  if clicked block is crimson button:
+    if player's held item is not shiny glass pane named "<grey>L5 Access":
+      set action bar of player to "<pink>Access Denied"
+      cancel event
+    if player's held item is shiny glass pane named "<grey>L5 Access":
+      set action bar of player to "&aAccess Granted"
+  if clicked block is oak button:
+    if player's held item is not orange stained glass pane named "<grey>L3 Access":
+      if player's held item is not shiny red stained glass pane named "<grey>L4 Access":
+        if player's held item is not shiny glass pane named "<grey>L5 Access":
+          set action bar of player to "<pink>Access Denied"
+          cancel event
+    if player's held item is orange stained glass pane named "<grey>L3 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny red stained glass pane named "<grey>L4 Access":
+      set action bar of player to "&aAccess Granted"
+    if player's held item is shiny glass pane named "<grey>L5 Access":
+      set action bar of player to "&aAccess Granted"

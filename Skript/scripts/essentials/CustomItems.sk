@@ -1,0 +1,37 @@
+command /l1:
+  permission: jresearcher.permission
+  trigger:
+    give player lime stained glass pane named "<grey>L1 Access"
+
+command /l2:
+  permission: jresearcher.permission
+  trigger:
+    give player yellow stained glass pane named "<grey>L2 Access"
+
+command /l3:
+  permission: jresearcher.permission
+  trigger:
+    give player orange stained glass pane named "<grey>L3 Access"
+	
+command /l4:
+  permission: hr.permission
+  trigger:
+    give player shiny red stained glass pane named "<grey>L4 Access"
+	
+command /l5:
+  permission: hr2.permission
+  trigger:
+    give player shiny glass pane named "<grey>L5 Access"
+
+command /cd:
+  trigger:
+    set {cd1} to leather chestplate
+    dye {cd1} orange
+    give player {cd1} named "<orange>Class-D Prison Suit"
+    set {cd2} to leather leggings
+    dye {cd2} orange
+    give player {cd2} named "<orange>Class-D Prison Pants"
+    set {cd3} to leather boots
+    dye {cd3} orange
+    give player {cd3} named "<orange>Class-D Prison Boots"
+	

@@ -1,0 +1,15 @@
+on player join:
+  while 1 is 1:
+    set {_score} to "0"
+    set name of sidebar of player to "&6&lAlchemy"
+    set score "&aHello &6%player%&a!" in sidebar of player to 6
+    set score "&f " in sidebar of player to 5
+    set id score "&6&lOnline Players: &f%player count%" in sidebar of player to 4 with id "%player%-1"
+    set id score "&6&lYour Ping: &f%ping of player%ms" in sidebar of player to 3 with id "%player%-3"
+    set id score "&6&lServer TPS: &f%tps from the last 1 minute%" in sidebar of player to 2 with id "%player%-2"
+    set score "&f" in sidebar of player to 1
+    set score "&6scdalchemy.minehut.gg" in sidebar of player to 0
+    wait 1 second
+    update score id "%player%-1" to "&6&lOnline Players: &f%player count%" and 4
+    update score id "%player%-2" to "&6&lServer TPS: &f%tps from the last 1 minute%" and 2
+    update score id "%player%-3" to "&6&lYour Ping: &f%ping of player%ms" and 3

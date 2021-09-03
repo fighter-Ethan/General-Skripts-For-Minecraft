@@ -1,0 +1,19 @@
+on click:
+  loop all players:
+    if clicked block is lever:
+      play 100 of poof at player offset by vector(2, 2, 2) with extra 0.1
+      wait 1 tick
+      play 100 of poof at player offset by vector(2, 2, 2) with extra 0.1
+      wait 1 tick
+      play 100 of poof at player offset by vector(2, 2, 2) with extra 0.1
+      wait 10 ticks
+      remove fire resistance from player
+      remove poison from player
+      remove water breathing from player
+      remove speed from player
+      remove jump boost from player
+      remove strength from player
+      remove regeneration from player
+      remove haste from player
+      wait 10 ticks
+      set action bar of player to "&2Decontamination Complete!"

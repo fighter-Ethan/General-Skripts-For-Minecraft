@@ -1,0 +1,40 @@
+on right click:
+  if block is warped button:
+    if player's held item is shiny purple stained glass pane named "<grey>Elevator Pass":
+      apply levitation 3 to player for 5 seconds
+    if player's held item is not shiny purple stained glass pane named "<grey>Elevator Pass":
+      set player's action bar to "&cAccess Denied"
+  if block is spruce button:
+    if player's held item is shiny purple stained glass pane named "<grey>Elevator Pass":
+      apply slow falling 3 to player for 3 seconds
+    if player's held item is not shiny purple stained glass pane named "<grey>Elevator Pass":
+      set player's action bar to "&cAccess Denied"
+  if block is birch button:
+    if player's held item is shiny purple stained glass pane named "<grey>Elevator Pass":
+      teleport player to {elevator}
+    if player's held item is not shiny purple stained glass pane named "<grey>Elevator Pass":
+      set player's action bar to "&cAccess Denied"
+  if block is jungle button:
+    if player's held item is shiny purple stained glass pane named "<grey>Elevator Pass":
+      teleport player to {elevat}
+    if player's held item is not shiny purple stained glass pane named "<grey>Elevator Pass":
+      set player's action bar to "&cAccess Denied"
+  
+	
+command /elevator-pass:
+  trigger:
+    give player shiny purple stained glass pane named "<grey>Elevator Pass"
+
+command /set-elevator:
+  permission: hr2.permission
+  trigger:
+    set {elevator} to location
+    send message "Elevator point set!" to player
+	
+command /set-elevatordest:
+  permission: hr2.permission
+  trigger:
+    set {elevat} to location
+    send message "Elevator point set!" to player
+
+

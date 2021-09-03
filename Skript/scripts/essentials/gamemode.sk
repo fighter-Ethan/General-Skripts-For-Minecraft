@@ -1,0 +1,16 @@
+command /gm <text>:
+  permission: op.permission
+  usage: &4Incorrect Syntax! Do /gm 1, /gm 0, /gm 2, or /gm 3!
+  trigger:
+    if arg-1 is "1":
+      set the player's gamemode to creative
+      send message "&bSet gamemode to creative!"
+    if arg-1 is "2":
+      set the player's gamemode to adventure
+      send message "&bSet gamemode to adventure!"
+    if arg-1 is "3":
+      set the player's gamemode to spectator
+      send message "&bSet gamemode to spectator!"
+    if arg-1 is "0":
+      set the player's gamemode to survival
+      send message "&bSet gamemode to survival!"

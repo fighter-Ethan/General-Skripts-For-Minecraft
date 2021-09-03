@@ -1,0 +1,30 @@
+command /kit alchemy:
+  permission: alchemy.permission
+  trigger:
+    set {_item4} to shiny leather helmet of protection 3
+    dye {_item4} white
+    give player {_item4} named "<grey>[&5Alchemy<grey>] <pink>Alchemist's Cowl" with lore "&6For the times when your coworkers", and "&6look at you with incredulity."
+    set {_item} to shiny leather chestplate of protection 3
+    dye {_item} white
+    give player {_item} named "<grey>[&5Alchemy<grey>] <pink>Alchemist's Robe" with lore "&6Hand-crafted and protected", and "&6against the harmful aethers."
+    set {_item2} to shiny leather leggings of protection 3
+    dye {_item2} white
+    give player {_item2} named "<grey>[&5Alchemy<grey>] <pink>Alchemist's Undergarments" with lore "&6Protect your legs from potions!"
+    set {_item3} to shiny leather boots of protection 3
+    dye {_item3} purple
+    give player {_item3} named "<grey>[&5Alchemy<grey>] <pink>Alchemist's Shoes" with lore "&6Purple shoes that make no sound."
+    give player shiny potion named "<grey>[&5Alchemy<grey>] &6Super Coffee" with lore "&fSources say it's brewed by", and "&fnone other than Elder Ruslav himself!"
+    give player shiny trident named "<grey>[&5Alchemy<grey>] &cCrozier" with lore "&5This is &lnot &f&5a weapon. It is", and "&5a tool to channel the aethers."
+    give player 12 of shiny bread named "<grey>[&5Alchemy<grey>] Dry Bread"
+    give player 2 of shiny book and quill named "<grey>[&5Alchemy<grey>] &dExperiment Log" 
+    give player orange glass pane named "<grey>L3 Access"
+	
+on right click:
+  if player's held item is shiny trident named "<grey>[&5Alchemy<grey>] &cCrozier" with lore "&5This is &lnot &f&5a weapon. It is", and "&5a tool to channel the aethers.":
+    cancel event
+
+
+on consume:
+  if player's held item is shiny potion named "<grey>[&5Alchemy<grey>] &6Super Coffee" with lore "&fSources say it's brewed by", and "&fnone other than Elder Ruslav himself!":
+    apply speed 2 to player for 20 seconds 
+ 

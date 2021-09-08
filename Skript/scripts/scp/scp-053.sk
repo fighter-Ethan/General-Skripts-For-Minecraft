@@ -6,7 +6,8 @@ command /053-feed:
 #Applies the wither effect when player hits SCP-053.
 on damage:
   attacker is player
-  victim is a baby zombie
+  #Add the specification for the mythicmob here?
+  victim is a baby zombie 
   apply wither 5 to attacker
   
 #SCP-053 Eats the food
